@@ -22,7 +22,7 @@ const Footer = () => (
           <Link to="/index/partenaires">Partenaires</Link>
         </li>
       </Col>
-      <Col className="mb-0">
+      {/* <Col className="mb-0">
         <a
           href="https://www.facebook.com/WildCodeSchool"
           target="_blank"
@@ -37,7 +37,7 @@ const Footer = () => (
         >
           <i className="fa fa-instagram fa-3x social insta" />
         </a>
-      </Col>
+      </Col> */}
     </Row>
   </Container>
 );
