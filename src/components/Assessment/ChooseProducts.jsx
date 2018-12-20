@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
-import Search from './Search';
 
-class Home extends Component {
+class ChooseProducts extends Component {
   constructor(props) {
     super(props);
     this.state = {  }
   }
   render() { 
     return ( 
-    <div>
-      <Search />
-    </div> );
+      <div></div>
+     );
   }
 }
  
-export default Home;
+export default ChooseProducts;
