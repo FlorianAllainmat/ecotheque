@@ -22,8 +22,8 @@ const Footer = () => (
           <Link to="/index/partenaires">Partenaires</Link>
         </li>
       </Col>
-      {/* <Col className="mb-0">
-        <a
+      <Col className="mb-0">
+        {/* <a
           href="https://www.facebook.com/WildCodeSchool"
           target="_blank"
           rel="noopener noreferrer"
@@ -36,8 +36,8 @@ const Footer = () => (
           rel="noopener noreferrer"
         >
           <i className="fa fa-instagram fa-3x social insta" />
-        </a>
-      </Col> */}
+        </a> */}
+      </Col>
     </Row>
   </Container>
 );
