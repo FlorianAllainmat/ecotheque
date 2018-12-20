@@ -3,7 +3,7 @@ import './App.scss';
 import { Route, Switch } from 'react-router-dom';
 import NavBar from './NavBar';
 import Footer from './Footer';
-import Home from './components/Home';
+import Home from './components/Home/Home';
 
 class App extends Component {
   render() {
