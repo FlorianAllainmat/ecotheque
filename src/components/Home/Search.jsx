@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 import './Search.scss';
 import { Row, Col, Input, Button, Form } from 'reactstrap';
-import { withRouter } from 'react-router';
 
+const imgSrc = 'media/ecotheque.jpg';
 
 class Search extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      keyword: '',
+      search: [],
       personcapacity: 0,
     };
     this.onChange = this.onChange.bind(this);
   }
+
 
   onChange(e) {
     this.setState({
@@ -21,34 +23,35 @@ class Search extends Component {
   }
 
   pageResult() {
-    //const { history } = this.props;
-    //const query = queryString.stringify(this.state);
-    //history.push(`/result?${query}`);
+    const { history } = this.props;;
+    history.push(`/result?`);
   }
 
   render() {
-    const { keyword } = this.state;
+    const { search } = this.state;
     return (
       <Row className="search">
         <Col>
           <Form onSubmit={() => this.pageResult()}>
             <div
               className="background"
-              style={{ backgroundImage: `url("https://www.mon-environnement.com/wp-content/uploads/2017/03/tree-1750784_1920-1080x675.jpg")`, height: '50vw' }}
+              style={{ backgroundImage: `url(${imgSrc})` }}
             >
               <h1>
-                La Technologie Sobre à portée de MAIN
+                Sois Eco-Friendly, même avec ta technologie
             </h1>
 
               <Input
                 className="search1"
                 placeholder="Recherche"
                 style={{ width: '25vw' }}
-                value={keyword}
+                value={search}
                 onChange={this.onChange}
-                name="keyword"
+                name="search"
               />
-              <Button color="success" className="search-button btn-submit">Rechercher</Button>
+              <Button tag={Link} to="./resultat-list" color="success" className="search-button btn-submit">Rechercher</Button>
+              <Button color="success" className="search1-button btn-submit">Evaluation</Button>
+              <Button color="success" className="search2-button btn-submit">pompomgirl</Button>
             </div>
           </Form>
         </Col>
@@ -57,4 +60,4 @@ class Search extends Component {
   }
 }
 
-export default withRouter(Search);
+export default Search;
