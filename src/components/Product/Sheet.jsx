@@ -9,23 +9,6 @@ class Sheet extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      product:
-      {
-        id: 1,
-        brand: 'Asus',
-        category: 'TV',
-        model: 'Asus50NU39',
-        price: '1403',
-        energy_class: 'B',
-        ges: 'C',
-        battery_movable: 0,
-        battery_recyclability: 87,
-        screen_size: 39,
-        shut_down_auto: 0,
-        autonomy: 54,
-        description: 'La nouvelle TV connectée d\'Asus, 39 pouces d\'image superbe',
-        image: 'https://static.fnac-static.com/multimedia/Images/FR/MDM/42/8f/43/4427586/1505-1/tsp20180906184352/TV-Philips-39PHS4112.jpg',
-      },
       data: [],
     }
   }
