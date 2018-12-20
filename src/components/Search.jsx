@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import './HomeInputs.scss';
+import './Search.scss';
 import { Input, Button, Form } from 'reactstrap';
 import { withRouter } from 'react-router';
-import queryString from 'query-string';
 
-const imgSrc = 'medias/hero-image.png';
 
-class HomeInputs extends Component {
+class Search extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -23,23 +21,23 @@ class HomeInputs extends Component {
   }
 
   pageResult() {
-    const { history } = this.props;
-    const query = queryString.stringify(this.state);
-    history.push(`/result?${query}`);
+    //const { history } = this.props;
+    //const query = queryString.stringify(this.state);
+    //history.push(`/result?${query}`);
   }
 
   render() {
     const { keyword } = this.state;
     return (
-      <div className="HomeInputs">
+      <div className="search">
         <Form onSubmit={() => this.pageResult()}>
           <div
             className="background"
-            style={{ backgroundImage: `url(${imgSrc})`, height: '34vw' }}
+            style={{ backgroundImage: `url("https://www.mon-environnement.com/wp-content/uploads/2017/03/tree-1750784_1920-1080x675.jpg")`, height: '50vw' }}
           >
-            <h2 className="border-text banner-text">
+            <h1>
               La Technologie Sobre à portée de MAIN
-            </h2>
+            </h1>
 
             <Input
               className="search1"
@@ -57,4 +55,4 @@ class HomeInputs extends Component {
   }
 }
 
-export default withRouter(HomeInputs);
+export default withRouter(Search);
