@@ -4,8 +4,9 @@ import Search from './Search';
 class Home extends Component {
   constructor(props) {
     super(props);
-    this.state = {  }
+    this.state = {}
   }
+
   render() { 
     return ( 
     <div>
@@ -13,5 +14,5 @@ class Home extends Component {
     </div> );
   }
 }
- 
+
 export default Home;
