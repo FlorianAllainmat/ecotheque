@@ -10,36 +10,47 @@ class List extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: Database
+      data: Database,
+      databis: [],
     }
   }
 
+  componentDidMount() {
+    fetch('http://192.168.1.96:8000/api/products/')
+      .then(res => res.json())
+      .then(data => this.setState({ data: data["hydra:member"], databis: data["hydra:member"] }));
+  }
+
   filterProduct(product) {
-    const byProduct = Database.filter(item => item.category === product);
+    const byProduct = this.state.databis.filter(item => item.category === product);
     this.setState({ data: byProduct });
   }
 
   filterEnergy(energy) {
-    const byEnergy = Database.filter(item => item.energyClass === energy);
+    const byEnergy = this.state.databis.filter(item => item.energyClass === energy);
     this.setState({ data: byEnergy });
   }
 
   filterBrand(brand) {
-    const byBrand = Database.filter(item => item.brand === brand);
+    const byBrand = this.state.databis.filter(item => item.brand === brand);
     this.setState({ data: byBrand });
   }
 
   filterNeed(need) {
-    const byNeed = Database.filter(item => item.need === need);
+    const byNeed = this.state.databis.filter(item => item.need === need);
     this.setState({ data: byNeed });
   }
 
   resetFilters() {
-    this.setState({ data: Database });
+/*     this.setState({ data: Database }); */
+fetch('http://192.168.1.96:8000/api/products/')
+      .then(res => res.json())
+      .then(data => this.setState({ data: data["hydra:member"], databis: data["hydra:member"] }));
   }
 
   render() {
     console.log(this.state.data);
+    console.log(this.state.databis);
     return (
       <Container fluid className="mb-3">
         <Row className="mt-3 mb-2 text-center">
