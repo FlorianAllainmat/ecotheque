@@ -155,10 +155,10 @@ fetch('http://192.168.1.96:8000/api/products/')
             </ul>
           </Col>
         </Row>
-        <Row className="mt-2 mb-2 text-center">
+        <Row className="mb-2 text-center">
           <Col>
             <Button color="info" size="sm" onClick={() => this.resetFilters()}>
-              Reset all filters
+              Initialiser les filtres
             </Button>
           </Col>
         </Row>
@@ -201,7 +201,7 @@ fetch('http://192.168.1.96:8000/api/products/')
                     <Row>
                       <Col>
                       <Link to={`/fiche-produits/${element.id}`}>
-                        <Button color="info">Fiche produit</Button> 
+                        <Button color="info" size="sm">Fiche produit</Button> 
                       </Link>
                       </Col>
                     </Row>

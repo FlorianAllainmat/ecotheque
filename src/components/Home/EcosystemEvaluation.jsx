@@ -8,10 +8,8 @@ import {
   CardBody,
   CardTitle,
   CardSubtitle,
-  CardText,
 } from 'reactstrap';
 import './EcoSystemEvaluation.scss';
-import { Link } from 'react-router-dom';
 
 const evalu = 'media/eval.png';
 const search = 'media/search.png';

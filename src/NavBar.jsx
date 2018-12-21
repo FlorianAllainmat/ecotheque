@@ -6,8 +6,7 @@ import {
   Nav,
   NavItem,
 } from 'reactstrap';
-
-const img = 'media/logo_navbar_ecotheque.png';
+import Logo from './components/logo_navbar_ecotheque.png'
 
 export default class NavBar extends React.Component {
   constructor(props) {
@@ -28,7 +27,7 @@ export default class NavBar extends React.Component {
       <div className="nav-bar">
         <Navbar className="navbar-div" dark expand="md">
           <NavItem className="logo" tag={Link} to="/">
-            <img src={img} alt="" />
+            <img src={Logo} alt="" />
           </NavItem>
           <Nav className="ml-auto" navbar>
             <NavItem tag={Link} to="/Concept">
