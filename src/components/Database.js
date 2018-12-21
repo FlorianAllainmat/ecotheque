@@ -498,7 +498,7 @@ const Database = [
       screenSize: 40,
       shutDownAuto: true,
       autonomy: 59,
-      description: "Le Samsung Galaxy S8 est le nouveau fleuron de la marque coréenne. Equipé d'un écran Super Amoled de 5,8 pouces sans bords, ce modèle se distingue par son format allongé au ratio 18,5:9. Puissant, il embarque le processeur Exynos 8895 avec 4 Go de mémoire vive.",
+      description: "La TV Led Samsung Galaxy est le nouveau fleuron de la marque coréenne. Equipée d'un écran 4K de 40 pouces, ce modèle se distingue par son format allongé au ratio 18,5:9. Puissant, il embarque Android TV",
       image: "https://yo-location.com/wp-content/uploads/2015/11/television.jpg",
       model: "TV Led Samsung 50NU7025",
       ecologyNotice: "Moyen plus"
