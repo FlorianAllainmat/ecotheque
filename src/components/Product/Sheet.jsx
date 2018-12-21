@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-  Container, Row, Col, Card, Button, CardImg, CardTitle, CardText, CardGroup,
+  Container, Row, Col, Card, CardImg, CardTitle, CardText,
   CardSubtitle, CardBody
 } from 'reactstrap';
 import './Sheet.scss';
@@ -10,24 +10,32 @@ class Sheet extends Component {
     super(props);
     this.state = {
       data: [],
+      databis: [],
     }
   }
 
   componentDidMount() {
-    fetch('http://192.168.1.96:8000/api/products/271')
+    window.scrollTo(0,0);
+    fetch(`http://192.168.1.96:8000/api/products/${this.props.match.params.id}`)
       .then(res => res.json())
       .then(data => this.setState({ data }));
+    fetch('http://192.168.1.96:8000/api/products/')
+      .then(res => res.json())
+      .then(databis => this.setState({ databis: databis["hydra:member"] }));
   }
+  /* componentDidMount() {
+    this.setState ({ data : data[27]})
+  } */
 
   render() {
     const amovible = (this.state.data.batteryMovable) ? "Oui" : "Non";
-
+    const comparaison = this.state.databis.filter(item => (item.category === this.state.data.category && item.energyClass === "A"));
     console.log(this.state.data);
     const { data } = this.state;
     return (
-      <Container fluid>
-        <Row className="align-items-center">
-          <Col lg="6" md="6" sm="12">
+      <Container className="Sheet">
+        <Row className="prod align-items-center mt-3">
+          <Col className="imgprod" lg="6" md="6" sm="12">
             <img src={data.image} className="img-fluid" alt="" />
           </Col>
           <Col lg="6" md="6" sm="12">
@@ -61,37 +69,31 @@ class Sheet extends Component {
           </Col>
         </Row>
         <Row>
-          <Col className="mb-3">
-            <CardGroup>
-              <Card>
-                <CardImg top width="100%" src="https://static.fnac-static.com/multimedia/Images/FR/MDM/f1/0b/78/7867377/1505-1/tsp20181122140652/TV-Brandt-B4040-Full-HD-39-5.jpg" alt="TV Brandt" />
-                <CardBody>
-                  <CardTitle>TV Brandt</CardTitle>
-                  <CardSubtitle>39 pouces</CardSubtitle>
-                  <CardText>Produit de la marque Brandt à faible impact énergétique.</CardText>
-                  <Button color="success">Voir la fiche du produit</Button>
-                </CardBody>
-              </Card>
-              <Card>
-                <CardImg top width="100%" src="https://static.fnac-static.com/multimedia/Images/34/36/30/35/5064754-1505-1505-1/tsp20170824104929/TV-Strong-SRT39HX100339-LED-HD-Noir-39.jpg#432d56d7-6012-42dc-8863-e93ea5f767d2" alt="TV Strong" />
-                <CardBody>
-                  <CardTitle>TV Strong</CardTitle>
-                  <CardSubtitle>39 pouces</CardSubtitle>
-                  <CardText>Produit de la marque Strong à faible impact énergétique.</CardText>
-                  <Button color="success">Voir la fiche du produit</Button>
-                </CardBody>
-              </Card>
-              <Card>
-                <CardImg top width="100%" src="https://static.fnac-static.com/multimedia/Images/FR/MDM/14/f0/7b/8122388/1505-1/tsp20181017135236/TV-Samsung-UE43NU7405-UHD-4K-Smart-TV-43.jpg" alt="TV Samsung" />
-                <CardBody>
-                  <CardTitle>TV Samsung</CardTitle>
-                  <CardSubtitle>43 pouces</CardSubtitle>
-                  <CardText>Téléviseur 4k de la marque Samsung.</CardText>
-                  <Button color="success">Voir la fiche du produit</Button>
-                </CardBody>
-              </Card>
-            </CardGroup>
+          {comparaison.map(element => (
+            <Col sm="12" md="6" xl="4" key={element.id}>
+            <Card className="card-element mb-4 mt-2">
+              <CardImg className="card-image"
+                top
+                src={element.image}
+                alt="Card image cap"
+              />
+              <CardBody className="card-text">
+                <CardTitle>{element.model}</CardTitle>
+                <Row>
+                  <Col lg="7" sm="6">
+                    <CardSubtitle>{element.category}</CardSubtitle>
+                    <CardText>For {element.need}</CardText>
+                  </Col>
+                  <Col lg="5" sm="6">
+                    <CardText>
+                      Classe {element.energyClass}
+                    </CardText>
+                  </Col>
+                </Row>
+              </CardBody>
+            </Card>
           </Col>
+          ))}
         </Row>
       </Container>
     );

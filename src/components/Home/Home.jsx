@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import Search from './Search';
 import EcosystemEvaluation from './EcosystemEvaluation';
-import Concept from './Concept';
-import Community from './Community';
 
 class Home extends Component {
   constructor(props) {
@@ -15,8 +13,6 @@ class Home extends Component {
       <div className="home-style">
         <Search />
         <EcosystemEvaluation />
-        <Concept />
-        <Community />
       </div>
     );
   }

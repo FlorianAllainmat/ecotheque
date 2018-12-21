@@ -5,30 +5,16 @@ import './Footer.scss';
 
 const Footer = () => (
   <Container className="Footer" fluid>
-    <Row className="mb-0 d-flex justify-content-around left">
-      <Col className="mb-0">
+    <Row className="compoFoot">
+      <Col xs={{ size: 3, offset: 4 }}>
         <li>
-          <Link to="/index/concept">Concept</Link>
-        </li>
-        <li>
-          <Link to="/index/partenaires">Partenaires</Link>
+          <Link to=""><i class="fab fa-facebook-square fa-3x social fb"></i></Link>
         </li>
       </Col>
-      <Col className="mb-0">
-        {/* <a
-          href="https://www.facebook.com/WildCodeSchool"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i className="fa fa-facebook-square fa-3x social fb" />
-        </a>
-        <a
-          href="https://www.instagram.com/WildCodeSchool/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i className="fa fa-instagram fa-3x social insta" />
-        </a> */}
+      <Col xs="3">
+        <li>
+          <Link to=""><i class="fab fa-instagram fa-3x social insta"></i></Link>
+        </li>
       </Col>
     </Row>
   </Container>
