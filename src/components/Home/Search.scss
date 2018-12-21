@@ -9,37 +9,25 @@
       position: absolute;
       text-align: center;
       left: 13%;
-      width : 70%;
+      width : 80%;
       top: 10%;
       font-size: 4em;
       color: white;
     }
     .search1{
       position: absolute;
-      left: 35%;
-      width: 30%;
+      left: 32%;
+      width: 20%;
       top: 60%;
+      border: none;
     }
     .search-button{
+      border-radius: 0 5px 5px 0;
       color: #b9dcdb;
       position: absolute;
-      left: 33%;
-      width: 30%;
-      top: 70%;
-    }
-    .search1-button{
-      color: #b9dcdb;
-      position: absolute;
-      left: 12%;
-      width: 30%;
-      top: 80%;
-    }
-    .search2-button{
-      color: #b9dcdb;
-      position: absolute;
-      left: 55%;
-      width: 30%;
-      top: 80%;
+      left: 60%;
+      width: 150px;
+      top: 60%;
     }
   }
 }
