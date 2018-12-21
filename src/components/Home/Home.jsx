@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Search from './Search';
-import { Container } from 'reactstrap';
 import SpecificNeed from './SpecificNeed';
 import EcosystemEvaluation from './EcosystemEvaluation';
 import Concept from './Concept';
@@ -14,13 +13,14 @@ class Home extends Component {
 
   render() { 
     return ( 
-    <Container fluid>
-      <Search />
-      <SpecificNeed />
-      <EcosystemEvaluation />
-      <Concept />
-      <Community />
-    </Container> );
+      <div>
+        <Search />
+        <SpecificNeed />
+        <EcosystemEvaluation />
+        <Concept />
+        <Community />
+      </div>
+    );
   }
 }
 
