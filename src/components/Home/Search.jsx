@@ -50,9 +50,6 @@ class Search extends Component {
                 name="search"
               />
               <Button tag={Link} to="./resultat-list" className="search-button btn-submit">Rechercher</Button>
-              <Button  className="search1-button btn-submit">Evaluation</Button>
-              <Button  className="search2-button btn-submit">pompomgirl</Button>
-
             </div>
           </Form>
         </Col>
