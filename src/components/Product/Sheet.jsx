@@ -34,6 +34,7 @@ class Sheet extends Component {
     const { data } = this.state;
     return (
       <Container className="Sheet">
+      <h2 className="text-center">Fiche détaillée</h2>
         <Row className="prod align-items-center mt-3">
           <Col className="imgprod" lg="6" md="6" sm="12">
             <img src={data.image} className="img-fluid" alt="" />
