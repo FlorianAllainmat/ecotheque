@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-  Container, Row, Col, Card, Button, CardImg, CardTitle, CardText, CardGroup,
+  Container, Row, Col, Card, CardImg, CardTitle, CardText,
   CardSubtitle, CardBody
 } from 'reactstrap';
 import './Sheet.scss';

@@ -16,9 +16,21 @@ class List extends Component {
   }
 
   componentDidMount() {
+    const url = "http://192.168.1.96:8000/search";
+    const config = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({"model":this.props.clef})
+    }
+      fetch(url, config)
+      .then (response => response.json())
+      .then(data => this.setState({ data }));
+
     fetch('http://192.168.1.96:8000/api/products/')
       .then(res => res.json())
-      .then(data => this.setState({ data: data["hydra:member"], databis: data["hydra:member"] }));
+      .then(data => this.setState({ databis: data["hydra:member"] }));
   }
 
   filterProduct(product) {

@@ -16,7 +16,7 @@ class App extends Component {
         <NavBar />
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/resultat-list" component={Result} />
+          <Route path="/resultat-list/:clef" component={Result} />
           <Route path="/formulaire-besoins" component={NeedsForm} />
           <Route path="/fiche-produits/:id" component={Sheet} />
           <Route path="/evaluation-produits" component={ChooseProducts} />
