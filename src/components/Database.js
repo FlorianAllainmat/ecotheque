@@ -67,7 +67,7 @@ const Database = [
       shutDownAuto: false,
       autonomy: 79,
       description: "Legion 730 15\" Combinant puissance et portabilité dans un design repensé à couper le souffle,il fait passer le jeu sur portable au niveau supérieur",
-      image: "https://m.media-amazon.com/images/S/aplus-media/sota/218ba394-b1e7-4de5-81fe-70eb7d58a289._CR0",
+      image: "http://www.annuaires-francophonie.com/wp-content/uploads/2018/10/lenovo-ideapad-320-15ast.jpg",
       model: "LENOVO IDEAPAD 320-15AST",
       ecologyNotice: "Bien"
     },
@@ -175,7 +175,7 @@ const Database = [
       shutDownAuto: false,
       autonomy: 30,
       description: "Quand la concurrence est impitoyable, seuls les héros qui sauront saisir l’occasion prouveront leur grandeur. Équipé d’un matériel puissant et d’un design agressif, l’ordinateur portable OMEN offre une performance mobile de qualité, vous permettant de relever n’importe quel défi de n’importe quel jeu, n’importe où.",
-      image: "https://m.media-amazon.com/images/S/aplus-media/vc/b259faec-518e-4ec1-bd53-732a730c4b58._CR248",
+      image: "https://store.hp.com/FranceStore/Html/Merch/Images/c05988767_500x367.jpg",
       model: "HP Pavilion 15-cs0016nf",
       ecologyNotice: "Pas bien du tout"
     },
@@ -500,7 +500,7 @@ const Database = [
       autonomy: 59,
       description: "Le Samsung Galaxy S8 est le nouveau fleuron de la marque coréenne. Equipé d'un écran Super Amoled de 5,8 pouces sans bords, ce modèle se distingue par son format allongé au ratio 18,5:9. Puissant, il embarque le processeur Exynos 8895 avec 4 Go de mémoire vive.",
       image: "https://chocobonplan.com/wp-content/uploads/2018/10/TV-Samsung-UE49MU6405-UHD-4K-300x300.png",
-      model: "TV LED SAMSUNG 50NU7025",
+      model: "TV Led Samsung 50NU7025",
       ecologyNotice: "Moyen plus"
     },
     {
