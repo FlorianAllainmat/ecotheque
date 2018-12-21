@@ -6,12 +6,12 @@ import './Footer.scss';
 const Footer = () => (
   <Container className="Footer" fluid>
     <Row className="compoFoot">
-      <Col className="" xs="6">
+      <Col xs={{ size: 3, offset: 4 }}>
         <li>
           <Link to=""><i class="fab fa-facebook-square fa-3x social fb"></i></Link>
         </li>
       </Col>
-      <Col className="" xs="6">
+      <Col xs="3">
         <li>
           <Link to=""><i class="fab fa-instagram fa-3x social insta"></i></Link>
         </li>
