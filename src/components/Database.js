@@ -499,7 +499,7 @@ const Database = [
       shutDownAuto: true,
       autonomy: 59,
       description: "Le Samsung Galaxy S8 est le nouveau fleuron de la marque coréenne. Equipé d'un écran Super Amoled de 5,8 pouces sans bords, ce modèle se distingue par son format allongé au ratio 18,5:9. Puissant, il embarque le processeur Exynos 8895 avec 4 Go de mémoire vive.",
-      image: "https://chocobonplan.com/wp-content/uploads/2018/10/TV-Samsung-UE49MU6405-UHD-4K-300x300.png",
+      image: "https://yo-location.com/wp-content/uploads/2015/11/television.jpg",
       model: "TV Led Samsung 50NU7025",
       ecologyNotice: "Moyen plus"
     },
