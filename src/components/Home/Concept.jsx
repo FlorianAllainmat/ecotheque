@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Row, Col } from 'reactstrap';
+import { Row, Col, Container } from 'reactstrap';
+import './Concept.scss';
 
 class Concept extends Component {
   constructor(props) {
@@ -8,9 +9,10 @@ class Concept extends Component {
   }
   render() {
     return (
+      <Container>
         <Row className="Concept">
-          <Col xs="6">
-            <img src="http://www.jobingenieur.com/Jobingenieur/environnement/images/iStock_000059159292_Full.jpg" alt="envi" height="500px"/> 
+          <Col classname="imgconc" xs="6">
+            <img src="http://www.jobingenieur.com/Jobingenieur/environnement/images/iStock_000059159292_Full.jpg" alt="envi" height="600px"/> 
           </Col>
           <Col xs="6">
             <h2>Le Concept</h2>
@@ -28,6 +30,7 @@ De nombreuses anecdotes similaires à celles-ci attestent clairement la nécessi
             </p>
           </Col>
         </Row>
+      </Container>
     );
   }
 }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-  Container, Row, Col, Card, Button, CardImg, CardTitle, CardText, CardGroup,
+  Container, Row, Col, Card, CardImg, CardTitle, CardText,
   CardSubtitle, CardBody
 } from 'reactstrap';
 import './Sheet.scss';
@@ -33,7 +33,7 @@ class Sheet extends Component {
     console.log(this.state.data);
     const { data } = this.state;
     return (
-      <Container className="Sheet" fluid>
+      <Container className="Sheet">
         <Row className="prod align-items-center mt-3">
           <Col className="imgprod" lg="6" md="6" sm="12">
             <img src={data.image} className="img-fluid" alt="" />
