@@ -31,7 +31,7 @@ export default class NavBar extends React.Component {
         <Navbar className="navbar-div" dark expand="md">
           <NavbarBrand>
             <Link to="/">
-              
+              Ecotheque
             </Link>
           </NavbarBrand>
           <NavItem tag={Link} to="/components/" className="join d-md-none d-lg-none">
