@@ -1,58 +1,59 @@
 import React, { Component } from 'react';
 import {
-  Row,
-  Col,
   Card,
   CardImg,
   CardText,
   CardBody,
   CardTitle,
   CardSubtitle,
+  Col,
+  Row,
 } from 'reactstrap';
 import './List.scss';
 
 class List extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      data : [],
-    };
-  }
-
-  componentDidMount() {
-    fetch(`http://192.168.1.96:8000/api/products/271`)
-      .then(results => results.json())
-      .then((data) => {
-        this.setState({ data : data["hydra:member"]});
-      });
-  }
-  render() {
-    console.log(this.state.data)
-    return (
-      <div className="Filter">
-        <Row>
-          <Col sm="12" md="6" xl="4">
-          
-          {this.state.data.map( element => (
-            <Card key={element.id} className="card-Element">
-              <CardImg
-                top
-                width="400px"
-                height="175px"
-                src= {element.image} 
-              />
-              <CardBody>
-                <CardTitle>Modèle = {element.model}</CardTitle>
-                <CardSubtitle>Prix = {element.price}$</CardSubtitle>
-                <CardText>Description = {element.description}</CardText>
-              </CardBody>
-            </Card>
-          ))};
-          </Col>
-        </Row>
-      </div>
-    );
-  }
+constructor(props) {
+super(props);
+this.state = { 
+data: [],
+}
 }
 
-export default List ;
+componentDidMount() {
+fetch('http://192.168.1.96:8000/api/products/')
+.then(res => res.json())
+.then(data => this.setState({ data: data["hydra:member"]}));
+}
+
+render() { 
+console.log(this.state.data);
+return ( 
+  <div className="List">
+    <h1>Liste produits</h1>
+    <Row>
+    {this.state.data.map(element => {
+        return (
+        <Col sm="12" md="6" xl="4">
+          <Card className="card-element" key={element.id}>
+            <CardImg
+              top
+              width="300px"
+              height="200px"
+              src={element.image}
+              alt="Card image cap"
+            />
+            <CardBody className="card-text">
+              <CardTitle>{element.model}</CardTitle>
+              <CardSubtitle>{element.price}</CardSubtitle>
+              <CardText>{element.need}</CardText>
+            </CardBody>
+          </Card>
+        </Col>
+      )})};
+    </Row>
+  </div>
+  );
+}
+}
+
+export default List;
