@@ -11,7 +11,7 @@ class Result extends Component {
     return ( 
     <div>
       <Filter />
-      <List />
+      <List clef={this.props.match.params.clef}/>
     </div> );
   }
 }

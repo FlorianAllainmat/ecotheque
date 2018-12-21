@@ -5,7 +5,7 @@ import './Footer.scss';
 
 const Footer = () => (
   <Container className="Footer" fluid>
-    <Row className="">
+    <Row className="compoFoot">
       <Col className="" xs="6">
         <li>
           <Link to=""><i class="fab fa-facebook-square fa-3x social fb"></i></Link>
