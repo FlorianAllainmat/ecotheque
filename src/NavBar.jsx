@@ -10,6 +10,8 @@ import {
   NavItem,
 } from 'reactstrap';
 
+const img = 'media/logo_navbar_ecotheque.png';
+
 export default class NavBar extends React.Component {
   constructor(props) {
     super(props);
@@ -29,10 +31,8 @@ export default class NavBar extends React.Component {
     return (
       <div className="nav-bar">
         <Navbar className="navbar-div" dark expand="md">
-          <NavbarBrand>
-            <Link to="/">
-              
-            </Link>
+          <NavbarBrand className="logo" href="/">
+            <img src={img}/>
           </NavbarBrand>
           <NavItem tag={Link} to="/components/" className="join d-md-none d-lg-none">
               Ecotheque

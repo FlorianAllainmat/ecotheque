@@ -29,16 +29,13 @@ render() {
 console.log(this.state.data);
 return ( 
   <div className="List">
-    <h1>Liste produits</h1>
     <Row>
     {this.state.data.map(element => {
         return (
         <Col sm="12" md="6" xl="4">
           <Card className="card-element" key={element.id}>
-            <CardImg
+            <CardImg className="card-image"
               top
-              width="300px"
-              height="200px"
               src={element.image}
               alt="Card image cap"
             />

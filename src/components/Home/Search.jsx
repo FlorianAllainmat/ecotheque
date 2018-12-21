@@ -39,7 +39,7 @@ class Search extends Component {
             >
               <h1>
                 Sois Eco-Friendly, même avec ta technologie
-            </h1>
+              </h1>
 
               <Input
                 className="search1"
@@ -49,9 +49,10 @@ class Search extends Component {
                 onChange={this.onChange}
                 name="search"
               />
-              <Button tag={Link} to="./resultat-list" color="success" className="search-button btn-submit">Rechercher</Button>
-              <Button color="success" className="search1-button btn-submit">Evaluation</Button>
-              <Link to="/formulaire-besoins"><Button color="success" className="search2-button btn-submit">pompomgirl</Button></Link>
+              <Button tag={Link} to="./resultat-list" className="search-button btn-submit">Rechercher</Button>
+              <Button  className="search1-button btn-submit">Evaluation</Button>
+              <Button  className="search2-button btn-submit">pompomgirl</Button>
+
             </div>
           </Form>
         </Col>
