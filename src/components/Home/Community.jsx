@@ -11,7 +11,7 @@ class Community extends Component {
       <Container className='Community'>
         <Row>
           <Col>
-            <h2>La Communauté</h2>
+            <h2>La communauté Ecothèque</h2>
             <p>
             Echotech est convaincu depuis 2018 que les entreprises doivent contribuer positivement à la mutation du monde en se transformant.
 Le Groupe favorise l’accélération de la transition et la réduction de la facture environnementale et sociétale afin de relever les grands défis des entreprises en les accompagnant de la stratégie à l’action vers un avenir plus performant, un « Good Future ».
