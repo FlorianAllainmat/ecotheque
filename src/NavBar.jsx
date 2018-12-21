@@ -32,7 +32,7 @@ export default class NavBar extends React.Component {
       <div className="nav-bar">
         <Navbar className="navbar-div" dark expand="md">
           <NavbarBrand className="logo" href="/">
-            <img src={img}/>
+            <img src={img} alt="" />
           </NavbarBrand>
           <NavItem tag={Link} to="/components/" className="join d-md-none d-lg-none">
               Ecotheque

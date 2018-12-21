@@ -1,28 +1,22 @@
-.List{
-  margin: auto;
 
-  .card-element{
+
+.card-element {
+  border: none;
+  box-shadow: 2px 10px 10px grey;
+
+  .card-image {
+    width: 22rem;
+    height: 15rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.8rem;
+    transition: transform 0.5s;
+  }
+
+  .card-image:hover {
+    transform: scale(1.05);
+  }
+  .card-text {
     background-color: beige;
-    padding: 7%;
-    margin: 8%;
-    height: 400px;
-    border: none;
-    box-shadow: 2px 10px 10px grey;
-
-    .card-image {
-      width: 300px;
-      height: 200px; 
-      transition: transform 0.5s;
-    }
-
-    .card-image:hover {
-      transform: scale(1.1);
-    }
-    .card-text{
-      margin: 2%;
-      padding: auto;
-      
-    }
-
   }
 }
