@@ -39,7 +39,7 @@ class Search extends Component {
             >
               <h1>
                 Sois Eco-Friendly, même avec ta technologie
-            </h1>
+              </h1>
 
               <Input
                 className="search1"
