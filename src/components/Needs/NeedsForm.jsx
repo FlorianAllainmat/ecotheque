@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 import './NeedsForm.scss';
 
@@ -85,7 +86,7 @@ class NeedsForm extends Component {
             </label>
         </form>
 
-        
+
         <form className="form-container">
           <h3 className="title-form">pour faire... </h3>
           <label className="todo-type">
@@ -106,7 +107,7 @@ class NeedsForm extends Component {
           </label>
         </form>
 
-        
+
         <form className="form-container">
           <h3 className="title-form">au prix de... </h3>
           <select className="select-option" onChange={this.handleChangePrice} value={this.state.price}>
@@ -118,7 +119,9 @@ class NeedsForm extends Component {
         </form>
 
         <div>
-          <button className="needs-submit" type="submit" onClick={this.handleSubmit}>Soumettez vos réponses</button>
+          <Link to="/fiche-produits/284">
+            <button className="needs-submit" >Soumettez vos réponses</button>
+          </Link>
         </div>
       </div >
     );
