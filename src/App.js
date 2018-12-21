@@ -18,7 +18,7 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route path="/resultat-list" component={Result} />
           <Route path="/formulaire-besoins" component={NeedsForm} />
-          <Route path="/fiche-produits" component={Sheet} />
+          <Route path="/fiche-produits/:id" component={Sheet} />
           <Route path="/evaluation-produits" component={ChooseProducts} />
         </Switch>
         <Footer />
