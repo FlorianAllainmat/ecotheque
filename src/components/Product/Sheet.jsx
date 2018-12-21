@@ -4,6 +4,7 @@ import {
   CardSubtitle, CardBody
 } from 'reactstrap';
 import './Sheet.scss';
+import data from '../../components/Database';
 
 class Sheet extends Component {
   constructor(props) {
@@ -13,10 +14,13 @@ class Sheet extends Component {
     }
   }
 
-  componentDidMount() {
+  /* componentDidMount() {
     fetch('http://192.168.1.96:8000/api/products/271')
       .then(res => res.json())
       .then(data => this.setState({ data }));
+  } */
+  componentDidMount() {
+    this.setState ({ data : data[27]})
   }
 
   render() {
@@ -25,9 +29,9 @@ class Sheet extends Component {
     console.log(this.state.data);
     const { data } = this.state;
     return (
-      <Container fluid>
-        <Row className="align-items-center">
-          <Col lg="6" md="6" sm="12">
+      <Container className="Sheet" fluid>
+        <Row className="prod align-items-center">
+          <Col className="imgprod" lg="6" md="6" sm="12">
             <img src={data.image} className="img-fluid" alt="" />
           </Col>
           <Col lg="6" md="6" sm="12">
@@ -69,7 +73,7 @@ class Sheet extends Component {
                   <CardTitle>TV Brandt</CardTitle>
                   <CardSubtitle>39 pouces</CardSubtitle>
                   <CardText>Produit de la marque Brandt à faible impact énergétique.</CardText>
-                  <Button color="success">Voir la fiche du produit</Button>
+                  <Button className="butAlte">Voir la fiche du produit</Button>
                 </CardBody>
               </Card>
               <Card>
@@ -78,7 +82,7 @@ class Sheet extends Component {
                   <CardTitle>TV Strong</CardTitle>
                   <CardSubtitle>39 pouces</CardSubtitle>
                   <CardText>Produit de la marque Strong à faible impact énergétique.</CardText>
-                  <Button color="success">Voir la fiche du produit</Button>
+                  <Button className="butAlte">Voir la fiche du produit</Button>
                 </CardBody>
               </Card>
               <Card>
@@ -87,7 +91,7 @@ class Sheet extends Component {
                   <CardTitle>TV Samsung</CardTitle>
                   <CardSubtitle>43 pouces</CardSubtitle>
                   <CardText>Téléviseur 4k de la marque Samsung.</CardText>
-                  <Button color="success">Voir la fiche du produit</Button>
+                  <Button className="butAlte">Voir la fiche du produit</Button>
                 </CardBody>
               </Card>
             </CardGroup>
