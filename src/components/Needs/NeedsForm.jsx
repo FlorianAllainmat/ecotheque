@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './NeedsForm.scss';
 
 class NeedsForm extends Component {
   constructor(props) {
@@ -6,7 +7,7 @@ class NeedsForm extends Component {
     this.state = {
       category: "Computer",
       need: "Office",
-      price :"500",
+      price: "500",
     };
 
     this.handleChangeCategory = this.handleChangeCategory.bind(this)
@@ -61,10 +62,10 @@ class NeedsForm extends Component {
   render() {
     console.log(this.state);
     return (
-      <div>
-        <h1>Comment décririez-vous votre besoin ?</h1>
+      <div className="need-form">
+        <h1 className="need-form-title">Comment décririez-vous votre besoin ?</h1>
         <div>
-          <h2>J'ai besoin d'un... </h2>
+          <h3 className="title-form">J'ai besoin d'un... </h3>
           <form>
             <div className="need-type">
               <label>
@@ -93,7 +94,7 @@ class NeedsForm extends Component {
           </form>
         </div>
         <div>
-          <h2>pour faire... </h2>
+          <h3 className="title-form">pour faire... </h3>
           <form>
             <div className="todo-type">
               <label>
@@ -122,7 +123,7 @@ class NeedsForm extends Component {
           </form>
         </div>
         <div>
-          <h2>au prix de... </h2>
+          <h3 className="title-form">au prix de... </h3>
           <form>
             <select onChange={this.handleChangePrice} value={this.state.price}>
               <option value="500" >inférieur à 500 euros</option>
@@ -133,7 +134,7 @@ class NeedsForm extends Component {
           </form>
         </div>
         <div>
-          <button type="submit" onClick={this.handleSubmit}>Soumettez vos réponses</button>
+          <button className="needs-submit" type="submit" onClick={this.handleSubmit}>Soumettez vos réponses</button>
         </div>
       </div>
     );
