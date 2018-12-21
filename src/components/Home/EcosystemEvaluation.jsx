@@ -10,6 +10,7 @@ import {
   CardText,
 } from 'reactstrap';
 import './EcoSystemEvaluation.scss';
+import { Link } from 'react-router-dom';
 
 const evalu = 'media/eval.png';
 const search = 'media/search.png';
@@ -29,9 +30,9 @@ class EcoSystemEvaluation extends Component {
               alt="Card image"
             />
             <CardBody className="card-truc">
-              <CardTitle>Vous voulez évaluer vos matériaux ?</CardTitle>
-              <CardSubtitle>Comment trouver la bonne alernative entre Technologie et Ecologie</CardSubtitle>
-              <CardText>Le but de ce test est de vous montrer à quel point nous pouvons améliorer nos environnement avec des gestes simples et de vous donner une visualisation ecologique de la Technologie. </CardText>
+              <CardTitle>Evaluez votre matériel numérique</CardTitle>
+              <CardSubtitle>Découvrez l'impact environnemental de votre écosystème</CardSubtitle>
+              <Link to="/evaluation-produits"><button className="button-submit">J'évalue mon matériel</button></Link>
             </CardBody>
           </Card>
         </Col>
@@ -42,9 +43,9 @@ class EcoSystemEvaluation extends Component {
               alt="Card image cap"
             />
             <CardBody className="card-truc">
-              <CardTitle>Vous voulez choisir un outils informatique écologique ?</CardTitle>
-              <CardSubtitle>Comment trouver la bonne alernative entre Technologie et Ecologie</CardSubtitle>
-              <CardText>Le but de ce test est de vous montrer à quel point nous pouvons améliorer nos environnement avec des gestes simples et de vous donner une visualisation ecologique de la Technologie.</CardText>
+              <CardTitle>Choisissez un outil informatique écologique</CardTitle>
+              <CardSubtitle>Trouvez le bon équilibre entre technologie et ecologie</CardSubtitle>
+              <Link to="/formulaire-besoins"><button className="button-submit">J'ai un besoin matériel</button></Link>
             </CardBody>
           </Card>
         </Col>

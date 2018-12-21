@@ -17,16 +17,17 @@
     .search1{
       position: absolute;
       left: 28%;
-      width: 20%;
-      top: 80%;
+      // width: 40%;
+      top: 65%;
       border: none;
     }
     .search-button{
+      border-radius: 0 5px 5px 0;
       color: #b9dcdb;
       position: absolute;
       left: 53%;
-      width: 150px;
-      top: 80%;
+      width: 130px;
+      top: 65%;
     }
   }
 }

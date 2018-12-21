@@ -11,7 +11,7 @@ class Community extends Component {
       <section id='Community'>
         <Row>
           <Col>
-            <h2>La Communauté</h2>
+            <h2>La communauté Ecothèque</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare dui quis odio venenatis, at volutpat metus tincidunt. Ut semper, nisl nec fringilla accumsan, erat magna lacinia quam, a aliquet arcu tortor in erat.
             </p>

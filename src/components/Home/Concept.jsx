@@ -13,7 +13,7 @@ class Concept extends Component {
           <Col>
             <h2>Le concept</h2>
             <p>
-              
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare dui quis odio venenatis, at volutpat metus tincidunt. Ut semper, nisl nec fringilla accumsan, erat magna lacinia quam, a aliquet arcu tortor in erat.
             </p>
           </Col>
         </Row>

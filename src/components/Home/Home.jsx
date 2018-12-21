@@ -12,7 +12,7 @@ class Home extends Component {
 
   render() { 
     return ( 
-      <div>
+      <div className="home-style">
         <Search />
         <EcosystemEvaluation />
         <Concept />
