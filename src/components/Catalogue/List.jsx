@@ -26,6 +26,7 @@ class List extends Component {
   }
 
   render() {
+    console.log(this.state.data);
     return (
       <Container fluid className="mb-3">
         <Row className="mt-3 mb-2 text-center">
