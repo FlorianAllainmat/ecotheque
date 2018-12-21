@@ -51,7 +51,7 @@ class Search extends Component {
               />
               <Button tag={Link} to="./resultat-list" color="success" className="search-button btn-submit">Rechercher</Button>
               <Button color="success" className="search1-button btn-submit">Evaluation</Button>
-              <Button color="success" className="search2-button btn-submit">pompomgirl</Button>
+              <Link to="/formulaire-besoins"><Button color="success" className="search2-button btn-submit">pompomgirl</Button></Link>
             </div>
           </Form>
         </Col>
