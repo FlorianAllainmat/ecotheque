@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { 
   Row, 
   Col,
@@ -23,7 +24,7 @@ class EcoSystemEvaluation extends Component {
     return ( 
       <Row className="EcoSystemEvaluation">
         <Col xs="12" md="6">
-          <Card mb-1 className="card-element">
+          <Card mb-1 className="card-element" tag={Link} to="./evaluation-produits">
             <CardImg className="card-image"
               src={evalu}
               alt="Card image"
@@ -36,7 +37,7 @@ class EcoSystemEvaluation extends Component {
           </Card>
         </Col>
         <Col xs="12" md="6">
-          <Card className="card-element">
+          <Card className="card-element" tag={Link} to="./formulaire-besoins">
             <CardImg className="card-image"
               src={search}
               alt="Card image cap"

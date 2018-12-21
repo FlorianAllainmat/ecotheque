@@ -8,6 +8,8 @@ import Result from './components/Catalogue/Result';
 import NeedsForm from './components/Needs/NeedsForm';
 import Sheet from './components/Product/Sheet';
 import ChooseProducts from './components/Assessment/ChooseProducts';
+import Concept from './components/Home/Concept';
+import Communauté from './components/Home/Community';
 
 class App extends Component {
   render() {
@@ -16,6 +18,8 @@ class App extends Component {
         <NavBar />
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route path="/concept" component={Concept} />
+          <Route path="/communauté" component={Communauté} />
           <Route path="/resultat-list/:clef" component={Result} />
           <Route path="/formulaire-besoins" component={NeedsForm} />
           <Route path="/fiche-produits/:id" component={Sheet} />
