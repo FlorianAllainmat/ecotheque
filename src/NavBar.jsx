@@ -37,9 +37,6 @@ export default class NavBar extends React.Component {
             <NavItem tag={Link} to="/Communauté">
                 Communauté 
             </NavItem>
-            <NavItem tag={Link} to="/resultat-list">
-                Catalogue 
-            </NavItem>
           </Nav>
         </Navbar>
       </div>
